@@ -1,8 +1,8 @@
 import React from 'react'
-import {Drawer, Box, List, FormGroup, Toolbar, ButtonGroup, Button} from '@mui/material'
+import {Drawer, Box, List, FormGroup, Toolbar, ButtonGroup, Button, Divider} from '@mui/material'
 import AppDrawerCheckboxes from './AppDrawerCheckboxes'
 
-const AppDrawer = ({currentMode, drawerOpen, changeMode, getNoteState, noteState}) => {
+const AppDrawer = ({currentMode, handleStudyMode, studyMode, drawerOpen, changeMode, updateNoteState, noteState, }) => {
     return (
         <div>
             <Drawer anchor="left" open={drawerOpen}>
@@ -10,20 +10,29 @@ const AppDrawer = ({currentMode, drawerOpen, changeMode, getNoteState, noteState
                 <Box xs={{width: 'auto'}}>
                     <List style={{padding: "2rem 1rem"}}>
                         <FormGroup >
-                              <AppDrawerCheckboxes noteState={noteState} getNoteState={getNoteState} currentMode={currentMode}/>
+                              <AppDrawerCheckboxes noteState={noteState} updateNoteState={updateNoteState} currentMode={currentMode}/>
                         </FormGroup>
-                    </List>
                     <div style={{
                         display: 'flex',
                         flexDirection: 'column',
                         alignItems: "center",
+                        margin: '2rem'
                     }}>
                         <ButtonGroup >
-                            <Button  onClick={() => changeMode('treble')} variant={currentMode === "treble" ? "contained" : "outlined"}>Treble</Button>
-                            <Button  onClick={() => changeMode("bass")} variant={currentMode === "bass" ?  "contained": "outlined"}>Bass</Button>
-                            <Button >Study</Button>
+                            <Button  onClick={() => changeMode('tc')} variant={currentMode === "tc" ? "contained" : "outlined"}>Treble</Button>
+                            <Button  onClick={() => changeMode("bc")} variant={currentMode === "bc" ?  "contained": "outlined"}>Bass</Button>
+                            <Button onClick={() => handleStudyMode()} variant={studyMode ? "contained" : "outlined"}>Study</Button>
                         </ButtonGroup>
                     </div>
+                    <Divider />
+                    <div style={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: "center",
+                        margin: '2rem'
+                    }}>
+                    </div>
+                    </List>
                 </Box>
             </Drawer>
         </div>

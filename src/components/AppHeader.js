@@ -6,7 +6,7 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 const AppHeader = ({drawerState, openDrawer}) => {
     return (
         <div>
-            <AppBar position='relative' style={{zIndex: "1500"}}>
+            <AppBar position='relative' style={{zIndex: "1500", backgroundColor: "#005e02"}}>
             <Toolbar >
                 <IconButton onClick={openDrawer()}>
                     {drawerState ? <KeyboardArrowDownIcon /> : <MenuIcon/> }
