@@ -19,3 +19,7 @@
     width: 700px;
   }
 }
+
+.MuiSwitch-track {
+  background-color: #00a003 !important;
+}
