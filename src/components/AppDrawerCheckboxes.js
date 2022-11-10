@@ -30,33 +30,7 @@ const AppDrawerCheckboxes = ({currentMode, updateNoteState, noteState, subMode})
             'D5',
             "E5",
             "F5"
-        ],
-        "tc-lines": [
-            "E4",
-            "G4",
-            "B4",
-            "D5",
-            "F5"
-        ],
-        "tc-spaces": [
-            "F4",
-            "A4",
-            "C5",
-            "E5",
-        ],
-        "bc-lines": [
-            "G2",
-            "B2",
-            "D3",
-            "F3",
-            "A3",
-        ],
-        "bc-spaces": [
-            "A2",
-            "C3",
-            "E3",
-            "G3"
-        ]
+        ],    
     }
     return (
         <div>
