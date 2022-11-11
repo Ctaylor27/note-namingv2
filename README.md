@@ -1,70 +1,19 @@
-# Getting Started with Create React App
+# Note Naming Flashcards
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was created as a way to aid beginning music students to develop music literacy. Reading the notes on a page is a major challenge for young students and is a skill the will have to spend a lot of time developing. As a band director, I developed this application to give students a way to practice their note reading skills in a speedy manor. Many note naming applications exist but they almost always require a student to imput an answer. While this is valuable, I wanted a way for my students to be able to practice their notes in quick succession.
 
-## Available Scripts
+## Functionality
 
-In the project directory, you can run:
+The app displays a flashcard containing a note. When the student clicks the "random" button or presses the space bar a new card is instantly presented. Because the app doesn't require the students to enter an answer they are able to drill flashcards extremely quickly. In the top left is a menu button that opens up to reveal an options menu. Withen this menu the student will be to select which clef they would like to study, what notes are in the rotation, and whether or not study mode is activated. Study mode enables a text display showing the name of the presented note.
 
-### `npm start`
+Students can develop music literacy by drilling selected notes quickly.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## How it was built
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+This project likely could've been constructed in raw Javascript but using React made dealing with some of the quirks of the project easily fixable. I learned how to manage state through this project. The application has to track multiple states to function including the current selected note, the mode (bass or treble clef), the notes selected by the user to practice, and whether or not study mode is enabled. 
 
-### `npm test`
+Aside from React, I decided to utilize Material UI. This made the process of developing a user interface painless. For example, the drawer that slides out to present the options menu is a prebuilt component withen Material UI. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Visit the site
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+To view the sight in your own browser, please visit: https://taylornotenaming.netlify.app
