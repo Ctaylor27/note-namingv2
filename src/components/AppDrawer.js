@@ -21,6 +21,7 @@ const AppDrawer = ({currentMode, handleStudyMode, studyMode, drawerOpen, changeM
                         <ButtonGroup >
                             <Button  onClick={() => changeMode('tc')} variant={currentMode === "tc" ? "contained" : "outlined"}>Treble</Button>
                             <Button  onClick={() => changeMode("bc")} variant={currentMode === "bc" ?  "contained": "outlined"}>Bass</Button>
+                            <Button  onClick={() => changeMode("tb")} variant={currentMode === "tb" ?  "contained": "outlined"}>Tuba</Button>
                             <Button onClick={() => handleStudyMode()} variant={studyMode ? "contained" : "outlined"}>Study</Button>
                         </ButtonGroup>
                     </div>

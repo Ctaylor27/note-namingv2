@@ -30,7 +30,18 @@ const AppDrawerCheckboxes = ({currentMode, updateNoteState, noteState, subMode})
             'D5',
             "E5",
             "F5"
-        ],    
+        ],
+        "tb": [
+            "A1",
+            "B1",
+            "C2",
+            "D2",
+            "E2",
+            "F2",
+            "G2",
+            "A2",
+            'B2',
+        ],      
     }
     return (
         <div>
