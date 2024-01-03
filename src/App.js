@@ -20,7 +20,8 @@ const outerTheme = createTheme({
 // This is the configuration that will be used when the app is loaded
 const defaultNoteState = {
   'bc':  {"G2": false, "A2": false, "B2": false, "C3": true, "D3": true, "E3": true, "F3": false, "G3": false, "A3": false, "B3": false, "C4": false},
-  'tc': {"C4": true, "D4": true, "E4": true, "F4": false, "G4": false, "A4": false, "B4": false, "C5": false, "D5": false, "E5": false, "F5": false}
+  'tc': {"C4": true, "D4": true, "E4": true, "F4": false, "G4": false, "A4": false, "B4": false, "C5": false, "D5": false, "E5": false, "F5": false},
+  'tb': {"A1": false, "B1": true, "C2": true, "D2": true, "E2": false, "F2": false, "G2": false, "A2": false, "B2": false, },
 }
 
 function App() {
@@ -45,14 +46,24 @@ function App() {
   }
 
   // Changes the mode state to display the alternate clef.
-  const handleModeClick = (previousMode) => {
-    if (mode !== previousMode) {
-        if(mode === "bc") {
-          setMode('tc')
-        } 
-        else {
+  const handleModeClick = (targetMode) => {
+    if (mode !== targetMode) {
+      
+      
+
+        if (targetMode === "bc"){
           setMode('bc')
+          setNote("B2")
+        } 
+        if (targetMode === "tc") {
+          setMode('tc')
+          setNote("C4")
         }
+        if (targetMode === "tb") {
+          setMode('tb') 
+          setNote("B1")
+        }
+
     } else return    
   }
 
@@ -76,6 +87,7 @@ function App() {
   // Recursive function that selects a random note and displays it.
   // It will continue to call itself until it finds a working note.
   const displayImage = () => {
+    console.log(noteState[mode])
     // Determines a random note based on the amount of possible notes
     const target = Math.floor(Math.random() * Object.keys(noteState[mode]).length)
     // checks if the selected note has already is NOT the same as the previously selected note
