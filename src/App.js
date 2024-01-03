@@ -112,7 +112,7 @@ function App() {
           }}>
             <img src={`/assets/${mode}imgs/${note}${mode}.png`} loading="lazy" alt="Note Naming Flashcard" className='mainImage'/>
             <Typography style={studyMode ? {display : 'block'} : {display: 'none'}} variant="h3">{`${note}`}</Typography>
-            <Button size="large" variant="contained" style={{marginTop: "1rem", }}
+            <Button variant="contained" style={{marginTop: "5rem", padding: "2rem 10rem" }}
                   onClick={() => {
                     displayImage()
                   }}
