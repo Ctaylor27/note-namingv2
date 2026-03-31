@@ -11,7 +11,7 @@ const AppHeader = ({drawerState, openDrawer}) => {
                 <IconButton onClick={openDrawer()}>
                     {drawerState ? <KeyboardArrowDownIcon /> : <MenuIcon/> }
                 </IconButton>
-                <Typography style={{marginLeft: '1rem'}} variant="h5">VB Note Naming Cards</Typography>
+                <Typography style={{marginLeft: '1rem'}} variant="h5">Note Naming Flash Cards</Typography>
             </Toolbar>
             </AppBar>
         </div>
